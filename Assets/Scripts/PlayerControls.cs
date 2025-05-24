@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
@@ -60,6 +61,10 @@ public class CameraController : MonoBehaviour
     private Sprite backLight;
     [SerializeField]
     private Sprite backDark;
+
+    public UnityEvent flashlightBack; 
+    public UnityEvent flashlightOff;
+    public UnityEvent flashlightUp;
 
 
     private void Awake()
@@ -186,17 +191,20 @@ public class CameraController : MonoBehaviour
         if (targetPoint.position == upPoint.position)
         {
             upSprite.GetComponent<SpriteRenderer>().sprite = upLight;
+            flashlightUp.Invoke();
         }
 
         if (targetPoint.position == backPoint.position)
         {
             backSprite.GetComponent<SpriteRenderer>().sprite = backLight;
+            flashlightBack.Invoke();
         }
     }
 
     private void FlashlightReleased()
     {
         isFlashlight = false;
+        flashlightOff.Invoke();
 
         frontSprite.GetComponent<SpriteRenderer>().sprite = frontDark;
         leftSprite.GetComponent<SpriteRenderer>().sprite = leftDark;
