@@ -705,6 +705,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  demon1Light:
+    m_PersistentCalls:
+      m_Calls: []
+  demon2Light:
+    m_PersistentCalls:
+      m_Calls: []
+  demon3Light:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &536747872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,6 +1280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264549600}
   - component: {fileID: 1264549599}
+  - component: {fileID: 1264549601}
   m_Layer: 0
   m_Name: DemonManager
   m_TagString: Untagged
@@ -1291,6 +1301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   demon5Script: {fileID: 1507807604}
+  demonList: []
 --- !u!4 &1264549600
 Transform:
   m_ObjectHideFlags: 0
@@ -1306,6 +1317,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264549601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264549598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49708b17aa0f68458459f4ba566bed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  demonPositions: []
 --- !u!1 &1507807603
 GameObject:
   m_ObjectHideFlags: 0

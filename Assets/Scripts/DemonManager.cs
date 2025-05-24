@@ -5,10 +5,26 @@ using UnityEngine;
 
 public class DemonManager : MonoBehaviour
 {
+    public static DemonManager Instance;
+
     [SerializeField]
     private Demon5 demon5Script;
+    [SerializeField]
     private List<GameObject> demonList = new List<GameObject>();
     private int demonAmmount;
+
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -46,9 +62,15 @@ public class DemonManager : MonoBehaviour
 
         demonAmmount++;
 
-        Transform demonPosition = PositionManager.Instance.AssignPosition();
-        GameObject newDemon = GetDemon();   
+        GameObject newDemon = GetDemon();
+        string demonName = newDemon.name;
+        Transform demonPosition = PositionManager.Instance.AssignPosition(demonName);
         newDemon.transform.position = demonPosition.position;
+        if (newDemon.TryGetComponent<Demon1>(out var demonScript))
+        {
+            demonScript.ActivateDemon();
+            return;
+        }
     }
 
     private GameObject GetDemon()
@@ -65,4 +87,11 @@ public class DemonManager : MonoBehaviour
         yield return new WaitForSeconds(20);
         SpawnNewDemon();
     }
+
+    public void ReturnDemon(GameObject demon)
+    {
+        demonList.Add(demon);
+    }
+
+
 }

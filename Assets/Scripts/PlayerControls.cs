@@ -65,6 +65,9 @@ public class CameraController : MonoBehaviour
     public UnityEvent flashlightBack; 
     public UnityEvent flashlightOff;
     public UnityEvent flashlightUp;
+    public UnityEvent demon1Light;
+    public UnityEvent demon2Light;
+    public UnityEvent demon3Light;
 
 
     private void Awake()
@@ -176,16 +179,76 @@ public class CameraController : MonoBehaviour
         if (targetPoint.position == frontPoint.position)
         {
             frontSprite.GetComponent<SpriteRenderer>().sprite = frontLight;
+            string position = PositionManager.Instance.GetDemonPosition("demon1");
+            if (position != null)
+            {
+                demon1Light.Invoke();
+                return;
+            }
+
+            string position2 = PositionManager.Instance.GetDemonPosition("demon2");
+            if (position2 != null)
+            {
+                demon2Light.Invoke();
+                return;
+            }
+
+            string position3 = PositionManager.Instance.GetDemonPosition("demon3");
+            if (position3 != null)
+            {
+                demon3Light.Invoke();
+                return;
+            }
         }
 
         if (targetPoint.position == leftPoint.position)
         {
             leftSprite.GetComponent<SpriteRenderer>().sprite = leftLight;
+            string position = PositionManager.Instance.GetDemonPosition("demon1");
+            if (position != null)
+            {
+                demon1Light.Invoke();
+                return;
+            }
+
+            string position2 = PositionManager.Instance.GetDemonPosition("demon2");
+            if (position2 != null)
+            {
+                demon2Light.Invoke();
+                return;
+            }
+
+            string position3 = PositionManager.Instance.GetDemonPosition("demon3");
+            if (position3 != null)
+            {
+                demon3Light.Invoke();
+                return;
+            }
         }
 
         if (targetPoint.position == rightPoint.position)
         {
             rightSprite.GetComponent<SpriteRenderer>().sprite = rightLight;
+            string position = PositionManager.Instance.GetDemonPosition("demon1");
+            if (position != null)
+            {
+                demon1Light.Invoke();
+                return;
+            }
+
+            string position2 = PositionManager.Instance.GetDemonPosition("demon2");
+            if (position2 != null)
+            {
+                demon2Light.Invoke();
+                return;
+            }
+
+            string position3 = PositionManager.Instance.GetDemonPosition("demon3");
+            if (position3 != null)
+            {
+                demon3Light.Invoke();
+                return;
+            }
         }
 
         if (targetPoint.position == upPoint.position)
