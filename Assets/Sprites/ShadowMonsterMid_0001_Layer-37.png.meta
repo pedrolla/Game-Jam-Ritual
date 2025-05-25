@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: f0865771acca58348819a13cbc63f0c2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8090918529107083126
+    second: ShadowMonsterMid_0001_Layer-37_0
+  - first:
+      213: 2979154292981915502
+    second: ShadowMonsterMid_0001_Layer-37_1
+  - first:
+      213: 4531578969523337538
+    second: ShadowMonsterMid_0001_Layer-37_2
+  - first:
+      213: -4619576334821726449
+    second: ShadowMonsterMid_0001_Layer-37_3
+  - first:
+      213: 5176360514994661400
+    second: ShadowMonsterMid_0001_Layer-37_4
+  - first:
+      213: 7205056684871283347
+    second: ShadowMonsterMid_0001_Layer-37_5
+  - first:
+      213: -5372828029088529001
+    second: ShadowMonsterMid_0001_Layer-37_6
+  - first:
+      213: 1496762967604594663
+    second: ShadowMonsterMid_0001_Layer-37_7
+  - first:
+      213: 2639933793964315495
+    second: ShadowMonsterMid_0001_Layer-37_8
+  - first:
+      213: 6775792994250972234
+    second: ShadowMonsterMid_0001_Layer-37_9
+  - first:
+      213: 6778653804141941662
+    second: ShadowMonsterMid_0001_Layer-37_10
+  - first:
+      213: 7267023034108396678
+    second: ShadowMonsterMid_0001_Layer-37_11
+  - first:
+      213: 9136848499358399783
+    second: ShadowMonsterMid_0001_Layer-37_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 482
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67fbd02e887b84070800000000000000
+      internalID: 8090918529107083126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 72
+        width: 58
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f54449b05185920800000000000000
+      internalID: 2979154292981915502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 96
+        width: 37
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 249b11e301763ee30800000000000000
+      internalID: 4531578969523337538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_3
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 5
+        width: 60
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07662e8cc7f3efb0800000000000000
+      internalID: -4619576334821726449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 72
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8186d9d767026d740800000000000000
+      internalID: 5176360514994661400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_5
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 95
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3927e4081e08df360800000000000000
+      internalID: 7205056684871283347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_6
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 95
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7958aeebf51ef65b0800000000000000
+      internalID: -5372828029088529001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_7
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 96
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e708052df195c410800000000000000
+      internalID: 1496762967604594663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_8
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 58
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763dac37ccde2a420800000000000000
+      internalID: 2639933793964315495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4cd8ed14d3780e50800000000000000
+      internalID: 6775792994250972234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 8
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e931b3358bd921e50800000000000000
+      internalID: 6778653804141941662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_11
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684cc9a72f6a9d460800000000000000
+      internalID: 7267023034108396678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowMonsterMid_0001_Layer-37_12
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 0
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d71d21d4b9cce70800000000000000
+      internalID: 9136848499358399783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ShadowMonsterMid_0001_Layer-37_0: 8090918529107083126
+      ShadowMonsterMid_0001_Layer-37_1: 2979154292981915502
+      ShadowMonsterMid_0001_Layer-37_10: 6778653804141941662
+      ShadowMonsterMid_0001_Layer-37_11: 7267023034108396678
+      ShadowMonsterMid_0001_Layer-37_12: 9136848499358399783
+      ShadowMonsterMid_0001_Layer-37_2: 4531578969523337538
+      ShadowMonsterMid_0001_Layer-37_3: -4619576334821726449
+      ShadowMonsterMid_0001_Layer-37_4: 5176360514994661400
+      ShadowMonsterMid_0001_Layer-37_5: 7205056684871283347
+      ShadowMonsterMid_0001_Layer-37_6: -5372828029088529001
+      ShadowMonsterMid_0001_Layer-37_7: 1496762967604594663
+      ShadowMonsterMid_0001_Layer-37_8: 2639933793964315495
+      ShadowMonsterMid_0001_Layer-37_9: 6775792994250972234
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

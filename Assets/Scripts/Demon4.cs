@@ -12,22 +12,24 @@ public class Demon4 : MonoBehaviour
     //make on last stage either run out of time or if u point light at u die works
 
     [SerializeField] private SpriteRenderer spriteRenderer;
-
-    [SerializeField] private Sprite demonStage1;
-    [SerializeField] private Sprite demonStage2;
-    [SerializeField] private Sprite demonStage3;
     [SerializeField] private Sprite demonStage4;
 
     [SerializeField] private int stageInterval = 5;
     [SerializeField] private int deathcountdown = 5;
+    private bool firstTime = true;
 
+    [SerializeField]
     private int stageNumber;
+    [SerializeField]
+    private CameraController cameraController;
 
     private void Start()
     {
+        DemonManager.Instance.AddActiveDemons(gameObject);
+
         stageNumber = 1;
+        spriteRenderer.sprite = null;
         spriteRenderer.enabled = false;
-        spriteRenderer.sprite = demonStage1; //only when light on
         StartCoroutine(ChangeStageTimer());
     }
 
@@ -39,16 +41,22 @@ public class Demon4 : MonoBehaviour
             //kill
             GrandmaDead();
         }
-        else if (stageNumber > 1)
-        {
-            --stageNumber;
-            ChangeStage();
-        }
+
         else if (stageNumber == 1)
         {
             StopCoroutine(ChangeStageTimer());
             StartCoroutine(ChangeStageTimer());
         }
+
+        else if (stageNumber > 1 && !firstTime)
+        {
+            firstTime = true;
+            --stageNumber;
+            ChangeStage();
+
+            return;
+        }
+        firstTime = false;
     }
 
     public void LightOff()
@@ -58,28 +66,11 @@ public class Demon4 : MonoBehaviour
 
     private void ChangeStage()
     {
-        if (stageNumber == 1)
-        {
-            spriteRenderer.sprite = demonStage1;
-        }
+        cameraController.ChangeUpStage(stageNumber);
 
-        if (stageNumber == 2)
-        {
-            spriteRenderer.sprite = demonStage2;
-
-
-        }
-        else if (stageNumber == 3)
-        {
-            spriteRenderer.sprite = demonStage3;
-
-
-        }
-        else if (stageNumber == 4)
+        if (stageNumber == 4)
         {
             spriteRenderer.sprite = demonStage4;
-
-
 
             if (spriteRenderer.enabled is true)
             {
@@ -92,11 +83,12 @@ public class Demon4 : MonoBehaviour
                 StartCoroutine(DeathCountdown());
             }
         }
+        else spriteRenderer.sprite = null;
     }
 
     private void GrandmaDead()
     {
-        print("you ded");
+        JumpscareManager.Instance.PlayRoofJumpScare();
     }
 
     private IEnumerator ChangeStageTimer()
@@ -105,7 +97,9 @@ public class Demon4 : MonoBehaviour
         {
             yield return new WaitForSeconds(stageInterval);
             ++stageNumber;
+
             ChangeStage();
+            if (stageNumber == 4) yield return null;
         }
     }
 

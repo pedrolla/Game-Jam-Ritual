@@ -1,0 +1,1911 @@
+fileFormatVersion: 2
+guid: 9bf2a91805e9999439d6ad3644d9b553
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7330829368208795878
+    second: CatJumpscare2_0
+  - first:
+      213: -5616933272085450621
+    second: CatJumpscare2_1
+  - first:
+      213: 8285117780458993811
+    second: CatJumpscare2_2
+  - first:
+      213: -9191145724514822118
+    second: CatJumpscare2_3
+  - first:
+      213: -7009043842705437203
+    second: CatJumpscare2_4
+  - first:
+      213: 553392428864464700
+    second: CatJumpscare2_5
+  - first:
+      213: -8614595407414361587
+    second: CatJumpscare2_6
+  - first:
+      213: -5576588890633564856
+    second: CatJumpscare2_7
+  - first:
+      213: -3975066391208791503
+    second: CatJumpscare2_8
+  - first:
+      213: 3196306400096115104
+    second: CatJumpscare2_9
+  - first:
+      213: -5089673222420609031
+    second: CatJumpscare2_10
+  - first:
+      213: -8651323600378522562
+    second: CatJumpscare2_11
+  - first:
+      213: 8521304952194656058
+    second: CatJumpscare2_12
+  - first:
+      213: -8531916186118297915
+    second: CatJumpscare2_13
+  - first:
+      213: 8196954519511298531
+    second: CatJumpscare2_14
+  - first:
+      213: 4578760403862760882
+    second: CatJumpscare2_15
+  - first:
+      213: -8587759406311666569
+    second: CatJumpscare2_16
+  - first:
+      213: -1312897468157921295
+    second: CatJumpscare2_17
+  - first:
+      213: 5495481925285392889
+    second: CatJumpscare2_18
+  - first:
+      213: -4197478172786956160
+    second: CatJumpscare2_19
+  - first:
+      213: 1743445680641215506
+    second: CatJumpscare2_20
+  - first:
+      213: -2340681154365327212
+    second: CatJumpscare2_21
+  - first:
+      213: 6265122650343301291
+    second: CatJumpscare2_22
+  - first:
+      213: 7507877036316985493
+    second: CatJumpscare2_23
+  - first:
+      213: 7564572953155603532
+    second: CatJumpscare2_24
+  - first:
+      213: 1380796914509908001
+    second: CatJumpscare2_25
+  - first:
+      213: 3096374961725747090
+    second: CatJumpscare2_26
+  - first:
+      213: 2959268904752675124
+    second: CatJumpscare2_27
+  - first:
+      213: 4828791239205223918
+    second: CatJumpscare2_28
+  - first:
+      213: -4563606774816913954
+    second: CatJumpscare2_29
+  - first:
+      213: 6083469926743129539
+    second: CatJumpscare2_30
+  - first:
+      213: 1311335438955584855
+    second: CatJumpscare2_31
+  - first:
+      213: -6403942663599479545
+    second: CatJumpscare2_32
+  - first:
+      213: 4645972098704926883
+    second: CatJumpscare2_33
+  - first:
+      213: -7559305760614974844
+    second: CatJumpscare2_34
+  - first:
+      213: 2636022236806868276
+    second: CatJumpscare2_35
+  - first:
+      213: 7790893839244834456
+    second: CatJumpscare2_36
+  - first:
+      213: -8297821704948468446
+    second: CatJumpscare2_37
+  - first:
+      213: 7059942186244729960
+    second: CatJumpscare2_38
+  - first:
+      213: 3807887468431774985
+    second: CatJumpscare2_39
+  - first:
+      213: -7951908523001036594
+    second: CatJumpscare2_40
+  - first:
+      213: 3199195387667587283
+    second: CatJumpscare2_41
+  - first:
+      213: 8963955452649135912
+    second: CatJumpscare2_42
+  - first:
+      213: -662108967643793922
+    second: CatJumpscare2_43
+  - first:
+      213: 2150871720006419390
+    second: CatJumpscare2_44
+  - first:
+      213: 4434632950294514767
+    second: CatJumpscare2_45
+  - first:
+      213: 363495667940432445
+    second: CatJumpscare2_46
+  - first:
+      213: -6279068139695606055
+    second: CatJumpscare2_47
+  - first:
+      213: 5714300890741186980
+    second: CatJumpscare2_48
+  - first:
+      213: 7962835458160313305
+    second: CatJumpscare2_49
+  - first:
+      213: 1241823807113945002
+    second: CatJumpscare2_50
+  - first:
+      213: 4043599517169458865
+    second: CatJumpscare2_51
+  - first:
+      213: 6979367504122320168
+    second: CatJumpscare2_52
+  - first:
+      213: 4766547904359213252
+    second: CatJumpscare2_53
+  - first:
+      213: -6237668013506297842
+    second: CatJumpscare2_54
+  - first:
+      213: -4306438199575288215
+    second: CatJumpscare2_55
+  - first:
+      213: 5089073599032461105
+    second: CatJumpscare2_56
+  - first:
+      213: 5931745898574723439
+    second: CatJumpscare2_57
+  - first:
+      213: -7993926045040310077
+    second: CatJumpscare2_58
+  - first:
+      213: -1476954194558444561
+    second: CatJumpscare2_59
+  - first:
+      213: -7599237180448118566
+    second: CatJumpscare2_60
+  - first:
+      213: 568025204836161571
+    second: CatJumpscare2_61
+  - first:
+      213: 5288393442008560439
+    second: CatJumpscare2_62
+  - first:
+      213: 6890688760469625645
+    second: CatJumpscare2_63
+  - first:
+      213: -4946014459327517780
+    second: CatJumpscare2_64
+  - first:
+      213: 7441639304489282258
+    second: CatJumpscare2_65
+  - first:
+      213: -4303461095850219831
+    second: CatJumpscare2_66
+  - first:
+      213: 6457861986860882376
+    second: CatJumpscare2_67
+  - first:
+      213: -7182409773377902229
+    second: CatJumpscare2_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CatJumpscare2_0
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1394
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8261158765cb560800000000000000
+      internalID: 7330829368208795878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_1
+      rect:
+        serializedVersion: 2
+        x: 2523
+        y: 1365
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3803646e2f4ac02b0800000000000000
+      internalID: -5616933272085450621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_2
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 1344
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398f78299b6aaf270800000000000000
+      internalID: 8285117780458993811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_3
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 1315
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18917b09ad727080800000000000000
+      internalID: -9191145724514822118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_4
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 1321
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded4764b2cfdabe90800000000000000
+      internalID: -7009043842705437203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_5
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 1290
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c376bd76b7b0ea700800000000000000
+      internalID: 553392428864464700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_6
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 1283
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d020b597e1fc27880800000000000000
+      internalID: -8614595407414361587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_7
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 1292
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d856333f9fb92b0800000000000000
+      internalID: -5576588890633564856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_8
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1282
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132f7619d2ab5d8c0800000000000000
+      internalID: -3975066391208791503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_9
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 1279
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a959037cbf8b5c20800000000000000
+      internalID: 3196306400096115104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_10
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 1279
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f74dc2ab29dd59b0800000000000000
+      internalID: -5089673222420609031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_11
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1266
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e341c7aa50350f780800000000000000
+      internalID: -8651323600378522562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_12
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1257
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37e65ac4b1c14670800000000000000
+      internalID: 8521304952194656058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_13
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 1262
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c66309ce6b889980800000000000000
+      internalID: -8531916186118297915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_14
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 1263
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1f087c4be61c170800000000000000
+      internalID: 8196954519511298531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_15
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 1250
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd2dd7f3560b8f30800000000000000
+      internalID: 4578760403862760882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_16
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 1247
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c0642e15622d880800000000000000
+      internalID: -8587759406311666569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_17
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 1230
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f7ffef65b6a7cde0800000000000000
+      internalID: -1312897468157921295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_18
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 1220
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1373ad1bfd34c40800000000000000
+      internalID: 5495481925285392889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_19
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 1228
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088e39e47df8fb5c0800000000000000
+      internalID: -4197478172786956160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_20
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 1214
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c0fcffb96f13810800000000000000
+      internalID: 1743445680641215506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_21
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1199
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4987a9d34ea348fd0800000000000000
+      internalID: -2340681154365327212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_22
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 1214
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba067ff3bdf22f650800000000000000
+      internalID: 6265122650343301291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_23
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 0
+        width: 1895
+        height: 1212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5988cf6d266513860800000000000000
+      internalID: 7507877036316985493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_24
+      rect:
+        serializedVersion: 2
+        x: 2681
+        y: 1161
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4c0e56a503caf860800000000000000
+      internalID: 7564572953155603532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_25
+      rect:
+        serializedVersion: 2
+        x: 2710
+        y: 1169
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128815c5a73992310800000000000000
+      internalID: 1380796914509908001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_26
+      rect:
+        serializedVersion: 2
+        x: 2555
+        y: 1128
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fa3155f9888fa20800000000000000
+      internalID: 3096374961725747090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_27
+      rect:
+        serializedVersion: 2
+        x: 2635
+        y: 1129
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43974a6d36f611920800000000000000
+      internalID: 2959268904752675124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_28
+      rect:
+        serializedVersion: 2
+        x: 2665
+        y: 1137
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed785b4c00530340800000000000000
+      internalID: 4828791239205223918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_29
+      rect:
+        serializedVersion: 2
+        x: 2558
+        y: 1109
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5c87c31dfcaa0c0800000000000000
+      internalID: -4563606774816913954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_30
+      rect:
+        serializedVersion: 2
+        x: 2419
+        y: 1091
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cdbb41baa3dc6450800000000000000
+      internalID: 6083469926743129539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_31
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 1097
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d145c42acc23210800000000000000
+      internalID: 1311335438955584855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_32
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 1089
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7052f26b310a027a0800000000000000
+      internalID: -6403942663599479545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_33
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 1053
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8eea3220fc97040800000000000000
+      internalID: 4645972098704926883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_34
+      rect:
+        serializedVersion: 2
+        x: 2316
+        y: 1060
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48afafd2673f71790800000000000000
+      internalID: -7559305760614974844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_35
+      rect:
+        serializedVersion: 2
+        x: 2567
+        y: 1052
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d67e41248059420800000000000000
+      internalID: 2636022236806868276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_36
+      rect:
+        serializedVersion: 2
+        x: 2225
+        y: 1040
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896b7fa3ba0de1c60800000000000000
+      internalID: 7790893839244834456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_37
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1046
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22535038f1738dc80800000000000000
+      internalID: -8297821704948468446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_38
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 1043
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c69e16304f9f160800000000000000
+      internalID: 7059942186244729960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_39
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 1037
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905998c3a7558d430800000000000000
+      internalID: 3807887468431774985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_40
+      rect:
+        serializedVersion: 2
+        x: 2537
+        y: 1044
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec04f10545525a190800000000000000
+      internalID: -7951908523001036594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_41
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 1019
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d0aef84143d56c20800000000000000
+      internalID: 3199195387667587283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_42
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 1016
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82fd399bdfd566c70800000000000000
+      internalID: 8963955452649135912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_43
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 1009
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5bdf4e667bfc6f0800000000000000
+      internalID: -662108967643793922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_44
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 994
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb38a6cfe6e69dd10800000000000000
+      internalID: 2150871720006419390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_45
+      rect:
+        serializedVersion: 2
+        x: 2215
+        y: 958
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c0c8f2c2bfa8d30800000000000000
+      internalID: 4434632950294514767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_46
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 945
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a9bf452656b0500800000000000000
+      internalID: 363495667940432445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_47
+      rect:
+        serializedVersion: 2
+        x: 2221
+        y: 934
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d678fc7bc44cd8a0800000000000000
+      internalID: -6279068139695606055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_48
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 862
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1a35c62664d4f40800000000000000
+      internalID: 5714300890741186980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_49
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 867
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3c78809aca18e60800000000000000
+      internalID: 7962835458160313305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_50
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 847
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf56a05c28db3110800000000000000
+      internalID: 1241823807113945002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_51
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 809
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be93d24650cd1830800000000000000
+      internalID: 4043599517169458865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_52
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 794
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8259d1844c1bbd060800000000000000
+      internalID: 6979367504122320168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_53
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 769
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8a634901e262240800000000000000
+      internalID: 4766547904359213252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_54
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 771
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0004248df95f69a0800000000000000
+      internalID: -6237668013506297842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_55
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 740
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966642326457c34c0800000000000000
+      internalID: -4306438199575288215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_56
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 747
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137062aa97500a640800000000000000
+      internalID: 5089073599032461105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_57
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 724
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f693d6e877bc15250800000000000000
+      internalID: 5931745898574723439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_58
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 703
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c801ac9d9edf0190800000000000000
+      internalID: -7993926045040310077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_59
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 709
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb12db3cfdc08be0800000000000000
+      internalID: -1476954194558444561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_60
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 695
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8e27ffb061a8690800000000000000
+      internalID: -7599237180448118566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_61
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 689
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3285abd0ae702e700800000000000000
+      internalID: 568025204836161571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_62
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 658
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733fc6ff0d5246940800000000000000
+      internalID: 5288393442008560439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_63
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 458
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b91915be4a0af50800000000000000
+      internalID: 6890688760469625645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_64
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 404
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab66d9ed0a3c5bb0800000000000000
+      internalID: -4946014459327517780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_65
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 411
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da2baa1583064760800000000000000
+      internalID: 7441639304489282258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_66
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 398
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6622d1fe80744c0800000000000000
+      internalID: -4303461095850219831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_67
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 369
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c95757034fee9950800000000000000
+      internalID: 6457861986860882376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJumpscare2_68
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 0
+        width: 175
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69248a7d54f25c90800000000000000
+      internalID: -7182409773377902229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CatJumpscare2_0: 7330829368208795878
+      CatJumpscare2_1: -5616933272085450621
+      CatJumpscare2_10: -5089673222420609031
+      CatJumpscare2_11: -8651323600378522562
+      CatJumpscare2_12: 8521304952194656058
+      CatJumpscare2_13: -8531916186118297915
+      CatJumpscare2_14: 8196954519511298531
+      CatJumpscare2_15: 4578760403862760882
+      CatJumpscare2_16: -8587759406311666569
+      CatJumpscare2_17: -1312897468157921295
+      CatJumpscare2_18: 5495481925285392889
+      CatJumpscare2_19: -4197478172786956160
+      CatJumpscare2_2: 8285117780458993811
+      CatJumpscare2_20: 1743445680641215506
+      CatJumpscare2_21: -2340681154365327212
+      CatJumpscare2_22: 6265122650343301291
+      CatJumpscare2_23: 7507877036316985493
+      CatJumpscare2_24: 7564572953155603532
+      CatJumpscare2_25: 1380796914509908001
+      CatJumpscare2_26: 3096374961725747090
+      CatJumpscare2_27: 2959268904752675124
+      CatJumpscare2_28: 4828791239205223918
+      CatJumpscare2_29: -4563606774816913954
+      CatJumpscare2_3: -9191145724514822118
+      CatJumpscare2_30: 6083469926743129539
+      CatJumpscare2_31: 1311335438955584855
+      CatJumpscare2_32: -6403942663599479545
+      CatJumpscare2_33: 4645972098704926883
+      CatJumpscare2_34: -7559305760614974844
+      CatJumpscare2_35: 2636022236806868276
+      CatJumpscare2_36: 7790893839244834456
+      CatJumpscare2_37: -8297821704948468446
+      CatJumpscare2_38: 7059942186244729960
+      CatJumpscare2_39: 3807887468431774985
+      CatJumpscare2_4: -7009043842705437203
+      CatJumpscare2_40: -7951908523001036594
+      CatJumpscare2_41: 3199195387667587283
+      CatJumpscare2_42: 8963955452649135912
+      CatJumpscare2_43: -662108967643793922
+      CatJumpscare2_44: 2150871720006419390
+      CatJumpscare2_45: 4434632950294514767
+      CatJumpscare2_46: 363495667940432445
+      CatJumpscare2_47: -6279068139695606055
+      CatJumpscare2_48: 5714300890741186980
+      CatJumpscare2_49: 7962835458160313305
+      CatJumpscare2_5: 553392428864464700
+      CatJumpscare2_50: 1241823807113945002
+      CatJumpscare2_51: 4043599517169458865
+      CatJumpscare2_52: 6979367504122320168
+      CatJumpscare2_53: 4766547904359213252
+      CatJumpscare2_54: -6237668013506297842
+      CatJumpscare2_55: -4306438199575288215
+      CatJumpscare2_56: 5089073599032461105
+      CatJumpscare2_57: 5931745898574723439
+      CatJumpscare2_58: -7993926045040310077
+      CatJumpscare2_59: -1476954194558444561
+      CatJumpscare2_6: -8614595407414361587
+      CatJumpscare2_60: -7599237180448118566
+      CatJumpscare2_61: 568025204836161571
+      CatJumpscare2_62: 5288393442008560439
+      CatJumpscare2_63: 6890688760469625645
+      CatJumpscare2_64: -4946014459327517780
+      CatJumpscare2_65: 7441639304489282258
+      CatJumpscare2_66: -4303461095850219831
+      CatJumpscare2_67: 6457861986860882376
+      CatJumpscare2_68: -7182409773377902229
+      CatJumpscare2_7: -5576588890633564856
+      CatJumpscare2_8: -3975066391208791503
+      CatJumpscare2_9: 3196306400096115104
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

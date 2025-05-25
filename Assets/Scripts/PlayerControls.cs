@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -26,41 +28,55 @@ public class CameraController : MonoBehaviour
     private float cameraMoveSpeed = 5f;
     private bool isLooking;
     private bool isFlashlight;
+    private bool flashlightLimit;
+    private bool isDemon;
+    [SerializeField]
+    private bool isLocked;
+    [SerializeField]
+    private float lockCD = 1f;
+    [SerializeField]
+    private float flashLightCD;
     [SerializeField]
     private float cameraCD = 1f;
-    private string activeInput;
+    private int upStage = 1;
+    private Direction? activeRawDirection;
+    [SerializeField]
+    private float flashLightDistance;
 
     [SerializeField]
-    private GameObject leftSprite;
-    [SerializeField]
-    private GameObject rightSprite;
+    private GameObject mainSprite;
     [SerializeField]
     private GameObject upSprite;
-    [SerializeField]
-    private GameObject frontSprite;
     [SerializeField]
     private GameObject backSprite;
 
     [SerializeField]
-    private Sprite leftLight;
+    private Sprite mainDark;
     [SerializeField]
-    private Sprite leftDark;
+    private Sprite leftLight;
     [SerializeField]
     private Sprite rightLight;
     [SerializeField]
-    private Sprite rightDark;
+    private Sprite upLight1;
     [SerializeField]
-    private Sprite upLight;
+    private Sprite upLight2;
     [SerializeField]
-    private Sprite upDark;
+    private Sprite upLight3;
     [SerializeField]
     private Sprite frontLight;
     [SerializeField]
-    private Sprite frontDark;
+    private Sprite upDark;
     [SerializeField]
     private Sprite backLight;
     [SerializeField]
     private Sprite backDark;
+    [SerializeField]
+    private Sprite backMonster;
+
+    [SerializeField]
+    private float battery;
+    [SerializeField]
+    private float batteryRate = 10f; 
 
     public UnityEvent flashlightBack; 
     public UnityEvent flashlightOff;
@@ -69,6 +85,17 @@ public class CameraController : MonoBehaviour
     public UnityEvent demon2Light;
     public UnityEvent demon3Light;
 
+
+
+    private enum Direction { A, W, D, S }
+
+    private Dictionary<Direction, Direction> inputMap = new Dictionary<Direction, Direction>
+    {
+        { Direction.A, Direction.A },
+        { Direction.W, Direction.W },
+        { Direction.D, Direction.D },
+        { Direction.S, Direction.S }
+    };
 
     private void Awake()
     {
@@ -84,10 +111,10 @@ public class CameraController : MonoBehaviour
     {
         inputActions.Enable();
 
-        inputActions.Player.A.performed += ctx => TryLook(leftPoint, "a");
-        inputActions.Player.S.performed += ctx => TryLook(backPoint, "s");
-        inputActions.Player.D.performed += ctx => TryLook(rightPoint, "d");
-        inputActions.Player.W.performed += ctx => TryLook(upPoint, "w");
+        inputActions.Player.A.performed += ctx => TryLookFromInput(Direction.A);
+        inputActions.Player.S.performed += ctx => TryLookFromInput(Direction.S);
+        inputActions.Player.D.performed += ctx => TryLookFromInput(Direction.D);
+        inputActions.Player.W.performed += ctx => TryLookFromInput(Direction.W);
 
         inputActions.Player.A.canceled += OnInputReleased;
         inputActions.Player.S.canceled += OnInputReleased;
@@ -99,10 +126,10 @@ public class CameraController : MonoBehaviour
 
     private void OnDisable()
     {
-        inputActions.Player.A.performed -= ctx => TryLook(leftPoint, "a");
-        inputActions.Player.S.performed -= ctx => TryLook(backPoint, "s");
-        inputActions.Player.D.performed -= ctx => TryLook(rightPoint, "d");
-        inputActions.Player.W.performed -= ctx => TryLook(upPoint, "w");
+        inputActions.Player.A.performed -= ctx => TryLookFromInput(Direction.A);
+        inputActions.Player.S.performed -= ctx => TryLookFromInput(Direction.S);
+        inputActions.Player.D.performed -= ctx => TryLookFromInput(Direction.D);
+        inputActions.Player.W.performed -= ctx => TryLookFromInput(Direction.W);
 
         inputActions.Player.A.canceled -= OnInputReleased;
         inputActions.Player.S.canceled -= OnInputReleased;
@@ -114,35 +141,81 @@ public class CameraController : MonoBehaviour
         inputActions.Disable();
     }
 
+    private void TryLookFromInput(Direction rawInput)
+    {
+        Direction remapped = inputMap[rawInput];
 
-    private void TryLook(Transform direction, string key)
+        Transform direction = remapped switch
+        {
+            Direction.A => leftPoint,
+            Direction.S => backPoint,
+            Direction.D => rightPoint,
+            Direction.W => upPoint,
+            _ => frontPoint
+        };
+
+        TryLook(direction, rawInput);
+    }
+
+    public void RotateControlsLeft()
+    {
+        inputMap[Direction.A] = Direction.W;
+        inputMap[Direction.W] = Direction.D;
+        inputMap[Direction.D] = Direction.S;
+        inputMap[Direction.S] = Direction.A;
+    }
+
+    public void RotateControlsRight()
+    {
+        inputMap[Direction.A] = Direction.S;
+        inputMap[Direction.S] = Direction.D;
+        inputMap[Direction.D] = Direction.W;
+        inputMap[Direction.W] = Direction.A;
+    }
+
+    private void TryLook(Transform direction, Direction rawInput)
     {
         if (isLooking) return;
 
         targetPoint = direction;
         isLooking = true;
-        activeInput = key;
+        activeRawDirection = rawInput;
 
         FlashlightReleased();
     }
 
     private void OnInputReleased(InputAction.CallbackContext context)
     {
-        if (context.control.name != activeInput) return;
+        Direction? released = GetDirectionFromControlName(context.control.name);
+        if (!released.HasValue || activeRawDirection != released.Value) return;
 
-        targetPoint = frontPoint;
-        if (isFlashlight)
-        {
-            FlashlightReleased();
-        }
-        StartCoroutine(CameraReset());
+            targetPoint = frontPoint;
+
+            if (isFlashlight)
+            {
+                FlashlightReleased();
+            }
+
+            StartCoroutine(CameraReset());
     }
+
+    private Direction? GetDirectionFromControlName(string controlName)
+    {
+        return controlName switch
+        {
+            "a" => Direction.A,
+            "s" => Direction.S,
+            "d" => Direction.D,
+            "w" => Direction.W,
+            _ => null
+        };
+    }
+
 
     private IEnumerator CameraReset()
     {
         yield return new WaitForSeconds(cameraCD);
         isLooking = false;
-        activeInput = null;
     }
 
     private void FlashlightPerformed(InputAction.CallbackContext context)
@@ -153,7 +226,7 @@ public class CameraController : MonoBehaviour
             return;
         }
 
-        if (Vector2.Distance(transform.position, targetPoint.position) < 0.01f)
+        if (Vector2.Distance(transform.position, targetPoint.position) < flashLightDistance)
         {
             Flashlight();
             return;
@@ -164,7 +237,7 @@ public class CameraController : MonoBehaviour
 
     private IEnumerator WaitForCamera()
     {
-        while (Vector2.Distance(transform.position, targetPoint.position) > 0.01f)
+        while (Vector2.Distance(transform.position, targetPoint.position) > flashLightDistance)
         {
             yield return null;
         }
@@ -174,115 +247,193 @@ public class CameraController : MonoBehaviour
 
     private void Flashlight()
     {
-        isFlashlight = true;
-
-        if (targetPoint.position == frontPoint.position)
+        if (flashlightLimit)
         {
-            frontSprite.GetComponent<SpriteRenderer>().sprite = frontLight;
-            string position = PositionManager.Instance.GetDemonPosition("demon1");
-            if (position != null)
-            {
-                demon1Light.Invoke();
-                return;
-            }
-
-            string position2 = PositionManager.Instance.GetDemonPosition("demon2");
-            if (position2 != null)
-            {
-                demon2Light.Invoke();
-                return;
-            }
-
-            string position3 = PositionManager.Instance.GetDemonPosition("demon3");
-            if (position3 != null)
-            {
-                demon3Light.Invoke();
-                return;
-            }
+            return;
         }
+            isFlashlight = true;
 
-        if (targetPoint.position == leftPoint.position)
-        {
-            leftSprite.GetComponent<SpriteRenderer>().sprite = leftLight;
-            string position = PositionManager.Instance.GetDemonPosition("demon1");
-            if (position != null)
+            if (Vector2.Distance(frontPoint.position, targetPoint.position) < flashLightDistance)
             {
-                demon1Light.Invoke();
-                return;
+            mainSprite.GetComponent<SpriteRenderer>().sprite = frontLight;
             }
 
-            string position2 = PositionManager.Instance.GetDemonPosition("demon2");
-            if (position2 != null)
+            if (Vector2.Distance(leftPoint.position, targetPoint.position) < flashLightDistance)
             {
-                demon2Light.Invoke();
-                return;
+                mainSprite.GetComponent<SpriteRenderer>().sprite = leftLight;
             }
 
-            string position3 = PositionManager.Instance.GetDemonPosition("demon3");
-            if (position3 != null)
+            if (Vector2.Distance(rightPoint.position, targetPoint.position) < flashLightDistance)
             {
-                demon3Light.Invoke();
-                return;
-            }
-        }
-
-        if (targetPoint.position == rightPoint.position)
-        {
-            rightSprite.GetComponent<SpriteRenderer>().sprite = rightLight;
-            string position = PositionManager.Instance.GetDemonPosition("demon1");
-            if (position != null)
-            {
-                demon1Light.Invoke();
-                return;
+                mainSprite.GetComponent<SpriteRenderer>().sprite = rightLight;
             }
 
-            string position2 = PositionManager.Instance.GetDemonPosition("demon2");
-            if (position2 != null)
+            if (Vector2.Distance(upPoint.position, targetPoint.position) < flashLightDistance)
             {
-                demon2Light.Invoke();
-                return;
+            upSprite.GetComponent<SpriteRenderer>().sprite = CheckUpStage();
+                flashlightUp.Invoke();
             }
 
-            string position3 = PositionManager.Instance.GetDemonPosition("demon3");
-            if (position3 != null)
+            if (Vector2.Distance(backPoint.position, targetPoint.position) < flashLightDistance)
             {
-                demon3Light.Invoke();
-                return;
-            }
-        }
-
-        if (targetPoint.position == upPoint.position)
-        {
-            upSprite.GetComponent<SpriteRenderer>().sprite = upLight;
-            flashlightUp.Invoke();
-        }
-
-        if (targetPoint.position == backPoint.position)
-        {
             backSprite.GetComponent<SpriteRenderer>().sprite = backLight;
-            flashlightBack.Invoke();
-        }
+                flashlightBack.Invoke();
+            }
+        SoundManager.Instance.PlayFlashlight();
     }
 
     private void FlashlightReleased()
     {
+        if (isLocked) return;
+
+        SoundManager.Instance.PlayFlashlight();
         isFlashlight = false;
         flashlightOff.Invoke();
 
-        frontSprite.GetComponent<SpriteRenderer>().sprite = frontDark;
-        leftSprite.GetComponent<SpriteRenderer>().sprite = leftDark;
-        rightSprite.GetComponent<SpriteRenderer>().sprite = rightDark;
-        backSprite.GetComponent<SpriteRenderer>().sprite = backDark;
+        mainSprite.GetComponent<SpriteRenderer>().sprite = mainDark;
+        backSprite.GetComponent<SpriteRenderer>().sprite = ChangeBack();
         upSprite.GetComponent<SpriteRenderer>().sprite = upDark;
+    }
+
+    public void FlashlightLimit()
+    {
+        flashlightLimit = true;
+        isFlashlight = false;
+        flashlightOff.Invoke();
+
+        mainSprite.GetComponent<SpriteRenderer>().sprite = mainDark;
+        backSprite.GetComponent<SpriteRenderer>().sprite = ChangeBack();
+        upSprite.GetComponent<SpriteRenderer>().sprite = upDark; 
+        StartCoroutine(FlashLightCD());
+    }
+
+    private IEnumerator FlashLightCD()
+    {
+        yield return new WaitForSeconds(flashLightCD);
+        flashlightLimit = false;
+    }
+
+    public void LockCamera()
+    {
+        isLocked = true;
+        StartCoroutine(UnlockCamera());
+    }
+
+    private IEnumerator UnlockCamera()
+    {
+        yield return new WaitForSeconds(lockCD);
+        isLocked = false;
     }
 
     private void Update()
     {
-        if (targetPoint != null)
+        if (!isLocked)
         {
-            transform.position = Vector3.Lerp(transform.position,
-                new Vector3(targetPoint.position.x, targetPoint.position.y, transform.position.z),
-                cameraMoveSpeed * Time.deltaTime);
+            if (targetPoint != null)
+            {
+                transform.position = Vector3.Lerp(transform.position,
+                    new Vector3(targetPoint.position.x, targetPoint.position.y, transform.position.z),
+                    cameraMoveSpeed * Time.deltaTime);
+            }
+
+            if (isFlashlight)
+            {
+                Battery();
+
+                string currentDirection = GetDirection();
+
+                if (PositionManager.Instance.GetDemonPosition("demon1") == currentDirection)
+                {
+                    demon1Light.Invoke();
+                    Debug.Log("Invoke event");
+                }
+
+                if (PositionManager.Instance.GetDemonPosition("demon2") == currentDirection)
+                {
+                    demon2Light.Invoke();
+                }
+
+                if (PositionManager.Instance.GetDemonPosition("demon3") == currentDirection)
+                {
+                    demon3Light.Invoke();
+                }
+            }
+        }
+    }
+
+    private string GetDirection()
+    {
+        if (targetPoint == frontPoint) return "front";
+        if (targetPoint == leftPoint) return "left";
+        if (targetPoint == rightPoint) return "right";
+        else return null;
+    }
+
+    public void ChangeUpStage(int stage)
+    {
+        upStage = stage;
+        if (upStage == 4)
+        {
+            upStage = 3;
+        }
+
+        if (targetPoint == upPoint && isFlashlight)
+        {
+            upSprite.GetComponent<SpriteRenderer>().sprite = CheckUpStage();
+        }
+    }
+
+    private Sprite CheckUpStage()
+    {
+        return upStage switch
+        {
+            3 => upLight3,
+            2 => upLight2,
+            _ => upLight1,
+        };
+    }
+
+    private Sprite ChangeBack()
+    {
+        if (isDemon)
+        {
+            return backMonster;
+        }
+
+        else return backDark;
+    }
+
+    public void IsBackMonster()
+    {
+        isDemon = true;
+        backSprite.GetComponent<SpriteRenderer>().sprite = ChangeBack();
+    }
+
+    public void IsNotBackMonster()
+    {
+        isDemon = false;
+    }
+
+    private void Battery()
+    {
+        battery -= batteryRate * Time.deltaTime;
+        
+        if (battery <= 0)
+        {
+            battery = 0;
+
+            flashlightLimit = true;
+            isFlashlight = false;
+            flashlightOff.Invoke();
+
+            mainSprite.GetComponent<SpriteRenderer>().sprite = mainDark;
+            backSprite.GetComponent<SpriteRenderer>().sprite = ChangeBack();
+            upSprite.GetComponent<SpriteRenderer>().sprite = upDark;
+        }
+
+        if (battery == 25)
+        {
+            SoundManager.Instance.PlayLowBattery();
         }
     }
 }

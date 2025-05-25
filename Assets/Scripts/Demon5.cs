@@ -7,19 +7,22 @@ public class Demon5 : MonoBehaviour
     private float attackCooldown = 2f;
     [SerializeField]
     private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private CameraController cameraContoller;
     private bool looked;
     private bool isActive;
-    private bool isCamera;
+
 
     private void Start()
     {
-        HideMonster();
+        DemonManager.Instance.AddActiveDemons(gameObject);
     }
 
     public void StartDemon()
     {
         SoundManager.Instance.PlayMonster5();
         StartCoroutine(DemonAttack());
+        cameraContoller.IsBackMonster();
         isActive = true;
     }
 
@@ -38,44 +41,16 @@ public class Demon5 : MonoBehaviour
 
     private void Kill()
     {
-        Debug.Log("Killed");
         SoundManager.Instance.PlayJumpScare();
+        JumpscareManager.Instance.PlayBedJumpScare();
     }
 
-    public void HasCamera()
+    public void OnFlashlightHit()
     {
-        isCamera = true;
-        StartCoroutine(ShowMonster());
-    }
+        if (!isActive) return;
 
-    private IEnumerator ShowMonster()
-    {
-        if (isCamera)
-        {
-            while (!isActive)
-            {
-                yield return null;
-            }
-
-            {
-                spriteRenderer.enabled = true;
-                looked = true;
-
-                StartCoroutine(DeactivateMonster());
-            }
-        }
-    }
-
-    public void HideMonster()
-    {
-        isCamera = false;
-        spriteRenderer.enabled = false;
-    }
-
-    private IEnumerator DeactivateMonster()
-    {
-        yield return new WaitForSeconds(1);
-        HideMonster();
+        looked = true;
+        cameraContoller.IsNotBackMonster();
         looked = false;
         isActive = false;
     }

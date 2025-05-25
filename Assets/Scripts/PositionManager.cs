@@ -7,7 +7,6 @@ public class PositionManager : MonoBehaviour
     public static PositionManager Instance;
 
     [SerializeField]
-    private Transform[] demonPositions;
     private List<Transform> availablePositions = new List<Transform>();
     private string demon1Position;
     private string demon2Position;
@@ -28,7 +27,7 @@ public class PositionManager : MonoBehaviour
 
     public Transform AssignPosition(string demonName)
     {
-            int index = Random.Range(0, availablePositions.Count);
+        int index = Random.Range(0, availablePositions.Count);
         Transform selected = availablePositions[index];
         availablePositions.RemoveAt(index);
 
@@ -48,9 +47,28 @@ public class PositionManager : MonoBehaviour
         return selected;
     }
 
-    public void ReleasePosition(Transform position)
+    public void ReleasePosition(GameObject demonObject)
     {
-         availablePositions.Add(position);
+        Transform position = demonObject.transform.parent;
+        availablePositions.Add(position);
+
+        string posName = position.name;
+
+        if (demon1Position == posName)
+        {
+            demon1Position = null;
+            return;
+        }
+        if (demon2Position == posName)
+        {
+            demon2Position = null;
+            return;
+        }
+        if (demon3Position == posName)
+        {
+            demon3Position = null;
+            return;
+        }
     }
 
     public string GetDemonPosition(string demon)
