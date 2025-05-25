@@ -56,7 +56,7 @@ public class Demon2 : MonoBehaviour
             if (position == "left")
             {
                 Vector2 currentPos = transform.position;
-                currentPos = new Vector2(currentPos.x - 5, currentPos.y);
+                currentPos = new Vector2(currentPos.x - 5, currentPos.y - 4.5f);
                 transform.position = currentPos;
                 transform.right = -transform.right;
             }
