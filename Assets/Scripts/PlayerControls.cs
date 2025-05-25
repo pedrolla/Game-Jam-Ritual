@@ -87,6 +87,8 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private int currentHour = 0;
     [SerializeField]
+    private int newHour;
+    [SerializeField]
     private GameObject pauseMenu;
 
     [SerializeField] 
@@ -607,7 +609,7 @@ public class CameraController : MonoBehaviour
     {
         currenTime += Time.deltaTime;
 
-        int newHour = Mathf.FloorToInt(currenTime / secondsPerHour);
+        newHour = Mathf.FloorToInt(currenTime / secondsPerHour);
 
         if (newHour > currentHour)
         {
@@ -616,7 +618,7 @@ public class CameraController : MonoBehaviour
 
             if (currentHour == 6)
             {
-                // You win!
+                ClockScript.Instance.ChangeClock();
             }
         }
     }

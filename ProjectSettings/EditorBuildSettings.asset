@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: c27bc59dc9d1c7c4da8796d9ad3266bf
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: ec623baa3bc7807459872fa2cb2f09ab
   - enabled: 1
@@ -15,11 +18,26 @@ EditorBuildSettings:
     path: Assets/Scenes/ManualScene.unity
     guid: 6ef41b3238763b043be7f07ab3f8e0f5
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: c76df702d0f29d644abc2aa430796b93
+  - enabled: 1
+    path: Assets/Scenes/Night1.unity
+    guid: 15621b1db65945447bce36643482b922
+  - enabled: 1
+    path: Assets/Scenes/Night2.unity
+    guid: 9bd1bc23b37739947b33130f6bf51174
+  - enabled: 1
+    path: Assets/Scenes/Night3.unity
+    guid: 2bf2099d5cc1bf84581ea7f4c3f1c86e
+  - enabled: 1
+    path: Assets/Scenes/Night4.unity
+    guid: 2689595dbcfecf04485892c5e9fc7216
+  - enabled: 1
+    path: Assets/Scenes/Night5.unity
+    guid: d364f14db34972b4fa482001bd0d8b0b
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 50b10b0951ca3d74a863c6000ab5632a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

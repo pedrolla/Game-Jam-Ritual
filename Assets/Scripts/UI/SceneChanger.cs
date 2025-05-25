@@ -5,7 +5,7 @@ public class SceneChanger : MonoBehaviour
 {
     public void ChangeToGameScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneHolder.SameScene();
     }
 
     public void ChangeToTutorialScene()
@@ -16,6 +16,7 @@ public class SceneChanger : MonoBehaviour
     public void ChangeToManualScene()
     {
         SceneManager.LoadScene("ManualScene");
+        SceneHolder.SceneReset();
     }
 
     public void ChangeToCreditsScene()
