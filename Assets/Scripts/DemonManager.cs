@@ -50,12 +50,14 @@ public class DemonManager : MonoBehaviour
 
     private IEnumerator Demon5Handler()
     {
-        while (true)
-        {
             yield return new WaitForSeconds(demon5SpawnTime);
             demon5Script.StartDemon();
             SoundManager.Instance.PlayMonster5();
-        }
+    }
+
+    public void ResetDemon5()
+    {
+        StartCoroutine(Demon5Handler());
     }
 
     private IEnumerator NormalDemonsHandler()

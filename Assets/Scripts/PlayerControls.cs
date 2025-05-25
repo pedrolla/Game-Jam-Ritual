@@ -76,7 +76,15 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private float battery;
     [SerializeField]
-    private float batteryRate = 10f; 
+    private float batteryRate = 10f;
+    [SerializeField]
+    private float secondsPerHour = 60;
+    private float currenTime = 0f;
+    [SerializeField]
+    private int currentHour = 0;
+    [SerializeField]
+    private GameObject pauseMenu;
+
 
     public UnityEvent flashlightBack; 
     public UnityEvent flashlightOff;
@@ -84,7 +92,6 @@ public class CameraController : MonoBehaviour
     public UnityEvent demon1Light;
     public UnityEvent demon2Light;
     public UnityEvent demon3Light;
-
 
 
     private enum Direction { A, W, D, S }
@@ -115,6 +122,7 @@ public class CameraController : MonoBehaviour
         inputActions.Player.S.performed += ctx => TryLookFromInput(Direction.S);
         inputActions.Player.D.performed += ctx => TryLookFromInput(Direction.D);
         inputActions.Player.W.performed += ctx => TryLookFromInput(Direction.W);
+        inputActions.Player.Menu.performed += ShowPauseMenu;
 
         inputActions.Player.A.canceled += OnInputReleased;
         inputActions.Player.S.canceled += OnInputReleased;
@@ -139,6 +147,24 @@ public class CameraController : MonoBehaviour
         inputActions.Player.Flashlight.performed -= FlashlightPerformed;
 
         inputActions.Disable();
+    }
+
+    private void ShowPauseMenu(InputAction.CallbackContext context)
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            AudioListener.pause = true;
+            pauseMenu.SetActive(true);
+        }
+        else HidePauseMenu();
+    }
+
+    public void HidePauseMenu()
+    {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+        pauseMenu.SetActive(false);
     }
 
     private void TryLookFromInput(Direction rawInput)
@@ -181,7 +207,16 @@ public class CameraController : MonoBehaviour
         isLooking = true;
         activeRawDirection = rawInput;
 
-        FlashlightReleased();
+        if (rawInput != Direction.S)
+        {
+            SoundManager.Instance.PlayMoveInBed();
+        }
+        else
+        {
+            SoundManager.Instance.PlayLookUnderBed();
+        }
+
+            FlashlightReleased();
     }
 
     private void OnInputReleased(InputAction.CallbackContext context)
@@ -286,7 +321,10 @@ public class CameraController : MonoBehaviour
     {
         if (isLocked) return;
 
-        SoundManager.Instance.PlayFlashlight();
+        if (isFlashlight)
+        {
+            SoundManager.Instance.PlayFlashlight();
+        }
         isFlashlight = false;
         flashlightOff.Invoke();
 
@@ -327,6 +365,7 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        Clock();
         if (!isLocked)
         {
             if (targetPoint != null)
@@ -451,6 +490,24 @@ public class CameraController : MonoBehaviour
         {
             SoundManager.Instance.PlayLowBattery();
             UIManager.Instance.Flashlight1();
+        }
+    }
+
+    private void Clock()
+    {
+        currenTime += Time.deltaTime;
+
+        int newHour = Mathf.FloorToInt(currenTime / secondsPerHour);
+
+        if (newHour > currentHour)
+        {
+            currentHour = newHour;
+            UIManager.Instance.UpdateTime(currentHour);
+
+            if (currentHour == 6)
+            {
+                // You win!
+            }
         }
     }
 }

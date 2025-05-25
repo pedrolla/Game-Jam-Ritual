@@ -38,6 +38,10 @@ public class SoundManager : MonoBehaviour
     private AudioClip roofJumpscare;
     [SerializeField]
     private AudioClip bedJumpscare;
+    [SerializeField]
+    private AudioClip moveInBed;
+    [SerializeField]
+    private AudioClip lookUnderBed;
 
 
     private void Awake()
@@ -112,20 +116,34 @@ public class SoundManager : MonoBehaviour
     public void PlayHandJumpscare()
     {
         globalAudioSource.PlayOneShot(handJumpscare);
+        globalAudioSource.clip = null;
     }
 
     public void PlayRoofJumpscare()
     {
         globalAudioSource.PlayOneShot(roofJumpscare);
+        globalAudioSource.clip = null;
     }
 
     public void PlayBedJumpscare()
     {
         globalAudioSource.PlayOneShot(bedJumpscare);
+        globalAudioSource.clip = null;
     }
 
     public void PlayCatJumpscare()
     {
         globalAudioSource.PlayOneShot(catJumpscare);
+        globalAudioSource.clip = null;
+    }
+
+    public void PlayMoveInBed()
+    {
+        globalAudioSource.PlayOneShot(moveInBed);
+    }
+
+    public void PlayLookUnderBed()
+    {
+        globalAudioSource.PlayOneShot (lookUnderBed);
     }
 }

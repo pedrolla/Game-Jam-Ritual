@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JumpscareManager : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class JumpscareManager : MonoBehaviour
     private Transform jumpscareCanvas;
     [SerializeField]
     private CameraController cameraController;
+    [SerializeField]
+    private float jumpscareCD;
 
 
     private void Awake()
@@ -36,6 +40,7 @@ public class JumpscareManager : MonoBehaviour
         Instantiate(catJumpscare, jumpscareCanvas);
         DemonManager.Instance.DeleteDemons();
         cameraController.enabled = false;
+        StartCoroutine(MainMenu());
     }
 
     public void PlayRoofJumpScare()
@@ -44,6 +49,7 @@ public class JumpscareManager : MonoBehaviour
         Instantiate(roofJumpscare, jumpscareCanvas);
         DemonManager.Instance.DeleteDemons();
         cameraController.enabled = false;
+        StartCoroutine(MainMenu());
     }
 
     public void PlayHandJumpScare()
@@ -52,6 +58,7 @@ public class JumpscareManager : MonoBehaviour
         Instantiate(handJumpscare, jumpscareCanvas);
         DemonManager.Instance.DeleteDemons();
         cameraController.enabled = false;
+        StartCoroutine(MainMenu());
     }
 
     public void PlayBedJumpScare()
@@ -60,5 +67,12 @@ public class JumpscareManager : MonoBehaviour
         Instantiate(bedJumpscare, jumpscareCanvas);
         DemonManager.Instance.DeleteDemons();
         cameraController.enabled = false;
+        StartCoroutine(MainMenu());
+    }
+
+    private IEnumerator MainMenu()
+    {
+        yield return new WaitForSeconds(jumpscareCD);
+        SceneManager.LoadScene("MainMenu");
     }
 }

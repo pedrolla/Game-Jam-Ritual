@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -16,6 +17,8 @@ public class UIManager : MonoBehaviour
     private GameObject flashlight1;
     [SerializeField]
     private GameObject flashlight0;
+    [SerializeField]
+    private TextMeshProUGUI timeText;
 
 
     private void Awake()
@@ -70,5 +73,10 @@ public class UIManager : MonoBehaviour
     {
         flashlight0.SetActive(true);
         flashlight1.SetActive(false);
+    }
+
+    public void UpdateTime(int hour)
+    {
+        timeText.text = (hour.ToString() + " A.M");
     }
 }

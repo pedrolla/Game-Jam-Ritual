@@ -50,7 +50,7 @@ public class Demon5 : MonoBehaviour
 
         looked = true;
         cameraContoller.IsNotBackMonster();
-        looked = false;
+        DemonManager.Instance.ResetDemon5();
         isActive = false;
     }
 }
