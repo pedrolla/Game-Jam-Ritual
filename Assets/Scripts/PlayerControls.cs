@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using TMPro;
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
+
 
 public class CameraController : MonoBehaviour
 {
@@ -85,6 +89,20 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private GameObject pauseMenu;
 
+    [SerializeField] 
+    private CinemachineCamera virtualCamera;
+    [SerializeField] 
+    private float maxZoom = 2f;
+    [SerializeField]
+    private float zoomDuration = 0.3f;
+    [SerializeField]
+    private float blurDuration = 0.2f;
+    [SerializeField]
+    private Volume myVolume;
+    [SerializeField]
+    private float originalSize;
+    private bool isZoomingBack = false;
+
 
     public UnityEvent flashlightBack; 
     public UnityEvent flashlightOff;
@@ -112,6 +130,7 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         targetPoint = frontPoint;
+        originalSize = 9;
     }
 
     private void OnEnable()
@@ -180,7 +199,51 @@ public class CameraController : MonoBehaviour
             _ => frontPoint
         };
 
-        TryLook(direction, rawInput);
+        if (rawInput == Direction.S)
+        {
+            StartCoroutine(ZoomInBed());
+        }
+        else
+        {
+            TryLook(direction, rawInput);
+        }
+    }
+
+    private IEnumerator ZoomInBed()
+    {
+        if (isLooking || isZoomingBack) yield break;
+
+        isZoomingBack = true;
+        isLooking = true;
+        activeRawDirection = Direction.S;
+
+        SoundManager.Instance.PlayLookUnderBed();
+        FlashlightReleased();
+
+        float elapsed = 0f;
+
+        // Zoom in
+        while (elapsed < zoomDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / zoomDuration;
+            virtualCamera.Lens.OrthographicSize = Mathf.Lerp(originalSize, maxZoom, t);
+            yield return null;
+        }
+
+        virtualCamera.Lens.OrthographicSize = maxZoom;
+
+        GetBlur();
+
+        transform.position = new Vector3(backPoint.position.x, backPoint.position.y, transform.position.z);
+        targetPoint = backPoint;
+        virtualCamera.Lens.OrthographicSize = originalSize; // Reset zoom instantly
+
+        yield return new WaitForSeconds(blurDuration);
+
+        NoBlur(); 
+
+        isZoomingBack = false;
     }
 
     public void RotateControlsLeft()
@@ -366,7 +429,7 @@ public class CameraController : MonoBehaviour
     private void Update()
     {
         Clock();
-        if (!isLocked)
+        if (!isLocked && !isZoomingBack)
         {
             if (targetPoint != null)
             {
@@ -508,6 +571,25 @@ public class CameraController : MonoBehaviour
             {
                 // You win!
             }
+        }
+    }
+
+    private void GetBlur()
+    {
+        DepthOfField dof;
+        if (myVolume.profile.TryGet(out dof))
+        {
+            dof.active = true;
+            dof.focusDistance.value = 10f;
+        }
+    }
+
+    private void NoBlur()
+    {
+        DepthOfField dof;
+        if (myVolume.profile.TryGet(out dof))
+        {
+            dof.active = false;
         }
     }
 }

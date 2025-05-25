@@ -55,7 +55,17 @@ public class Demon2 : MonoBehaviour
             spriteRenderer.sprite = normalSprite;
             if (position == "left")
             {
+                Vector2 currentPos = transform.position;
+                currentPos = new Vector2(currentPos.x - 5, currentPos.y);
+                transform.position = currentPos;
                 transform.right = -transform.right;
+            }
+
+            if (position == "right")
+            {
+                Vector2 currentPos = transform.position;
+                currentPos = new Vector2(currentPos.x, currentPos.y - 2.5f);
+                transform.position = currentPos;
             }
         }
 

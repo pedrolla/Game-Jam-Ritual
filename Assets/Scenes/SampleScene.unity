@@ -341,7 +341,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -375,7 +375,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.514
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -883,7 +883,7 @@ MonoBehaviour:
   handJumpscare: {fileID: 1229143220163833046, guid: e56cc355d4c76ca4495949c0951e8a5e, type: 3}
   bedJumpscare: {fileID: 4139687550535304299, guid: 3b9241680510759428e43325ab5d0514, type: 3}
   jumpscareCanvas: {fileID: 1070746602}
-  cameraController: {fileID: 1580747249}
+  cameraController: {fileID: 872941429}
   jumpscareCD: 3
 --- !u!4 &218371646
 Transform:
@@ -1309,7 +1309,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -1343,7 +1343,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.495
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1480,7 +1480,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1580747249}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
         m_MethodName: HidePauseMenu
         m_Mode: 1
@@ -1991,7 +1991,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2072,7 +2072,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1844792, y: -0.048956454, z: -54.771824}
+  m_LocalPosition: {x: 0.2, y: -4.5814934, z: -54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2145,7 +2145,7 @@ MonoBehaviour:
   stageInterval: 15
   deathcountdown: 5
   stageNumber: 0
-  cameraController: {fileID: 1580747249}
+  cameraController: {fileID: 872941429}
 --- !u!212 &536747874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2612,7 +2612,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.503
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2993,6 +2993,284 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866034368}
   m_CullTransparentMesh: 1
+--- !u!1 &872941428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 872941432}
+  - component: {fileID: 872941431}
+  - component: {fileID: 872941430}
+  - component: {fileID: 872941429}
+  - component: {fileID: 872941433}
+  m_Layer: 0
+  m_Name: CinemachineCamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &872941429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872941428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9957825c83f2b104daa00b7de8a6fbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPoint: {fileID: 247079572}
+  leftPoint: {fileID: 79780873}
+  rightPoint: {fileID: 1529889608}
+  frontPoint: {fileID: 652548617}
+  backPoint: {fileID: 270216981}
+  upPoint: {fileID: 53660233}
+  cameraMoveSpeed: 5
+  isLocked: 0
+  lockCD: 0.5
+  flashLightCD: 5
+  cameraCD: 0.5
+  flashLightDistance: 1
+  mainSprite: {fileID: 2114190745}
+  upSprite: {fileID: 1881006500}
+  backSprite: {fileID: 238065927}
+  mainDark: {fileID: 21300000, guid: 4ba6d355f588f6040a7fa77797c31370, type: 3}
+  leftLight: {fileID: 21300000, guid: c20f255fa6e5f174787262ac326e2d7f, type: 3}
+  rightLight: {fileID: 21300000, guid: d4704967eb1ecad44801bf1c1dbb53a4, type: 3}
+  upLight1: {fileID: 21300000, guid: 7d61ac0a68565f14b96e9e081e4e09e2, type: 3}
+  upLight2: {fileID: 21300000, guid: 79be05c7fadb8364295a6adacf736cd3, type: 3}
+  upLight3: {fileID: 21300000, guid: 99fe08fd93d2a4648ae5706ca44d089d, type: 3}
+  frontLight: {fileID: 21300000, guid: be56b1a3f898cee478cec72dd73d6e4f, type: 3}
+  upDark: {fileID: 21300000, guid: 96b6d151e2fc3d744aa1abe2c68c4f28, type: 3}
+  backLight: {fileID: 21300000, guid: 8207f0b1cbfe57e468cb86903d5fbb24, type: 3}
+  backDark: {fileID: 21300000, guid: 7e05bf6a8ca5312489a800ce8cd6414f, type: 3}
+  backMonster: {fileID: 21300000, guid: b9a1be2450790c34a924c49f0edbcfbf, type: 3}
+  battery: 100
+  batteryRate: 1
+  secondsPerHour: 60
+  currentHour: 0
+  pauseMenu: {fileID: 267550482}
+  virtualCamera: {fileID: 872941431}
+  maxZoom: 6
+  zoomDuration: 0.2
+  blurDuration: 0.2
+  myVolume: {fileID: 872941433}
+  originalSize: 0
+  flashlightBack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1507807604}
+        m_TargetAssemblyTypeName: Demon5, Assembly-CSharp
+        m_MethodName: OnFlashlightHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  flashlightOff:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 536747873}
+        m_TargetAssemblyTypeName: Demon4, Assembly-CSharp
+        m_MethodName: LightOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 935011006}
+        m_TargetAssemblyTypeName: Demon1, Assembly-CSharp
+        m_MethodName: OffFlashlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2109761448}
+        m_TargetAssemblyTypeName: Demon2, Assembly-CSharp
+        m_MethodName: Lightoff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  flashlightUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 536747873}
+        m_TargetAssemblyTypeName: Demon4, Assembly-CSharp
+        m_MethodName: LightOnDemon4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  demon1Light:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 935011006}
+        m_TargetAssemblyTypeName: Demon1, Assembly-CSharp
+        m_MethodName: Flashlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  demon2Light:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2109761448}
+        m_TargetAssemblyTypeName: Demon2, Assembly-CSharp
+        m_MethodName: FlashlightOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  demon3Light:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1268362051}
+        m_TargetAssemblyTypeName: Demon3, Assembly-CSharp
+        m_MethodName: Flashlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &872941430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872941428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundingShape2D: {fileID: 1505065077}
+  Damping: 0.5
+  SlowingDistance: 5
+  OversizeWindow:
+    Enabled: 0
+    MaxWindowSize: 0
+    Padding: 0
+  m_LegacyMaxWindowSize: -2
+--- !u!114 &872941431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872941428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 34
+    OrthographicSize: 9
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!4 &872941432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872941428}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2, y: -4.5814934, z: -54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &872941433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872941428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 275e3c3f63720a04aa21d949d7961ef1, type: 2}
 --- !u!1 &918619976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3103,7 +3381,7 @@ MonoBehaviour:
   frontSprite: {fileID: 21300000, guid: 2151e00a0fa8981478bee929cfa2fd9b, type: 3}
   leftSprite: {fileID: 21300000, guid: 96fd82a639be8b64c9e6a5006f096634, type: 3}
   rightSprite: {fileID: 21300000, guid: f2e87596254f69448b30623f15ab7108, type: 3}
-  cameraController: {fileID: 1580747249}
+  cameraController: {fileID: 872941429}
 --- !u!212 &935011007
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3926,7 +4204,7 @@ Transform:
   m_GameObject: {fileID: 1077499719}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0406363, y: 0.9555404, z: 0.036875937}
+  m_LocalPosition: {x: 2.0406363, y: 0.9555404, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4450,7 +4728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1268362052}
   lanternCD: 0.2
-  cameraController: {fileID: 1580747249}
+  cameraController: {fileID: 872941429}
   frontSprite: {fileID: 21300000, guid: f0865771acca58348819a13cbc63f0c2, type: 3}
   normalSprite: {fileID: 21300000, guid: cfa9a633ac8f50948a95984f30e3481c, type: 3}
 --- !u!212 &1268362052
@@ -4516,8 +4794,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268362050}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.353241, y: -2.4798815, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5288,9 +5566,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8584bb59d0feaaf429b38f4e745c8cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 4
+  attackCooldown: 7
   spriteRenderer: {fileID: 1507807605}
-  cameraContoller: {fileID: 1580747249}
+  cameraContoller: {fileID: 872941429}
 --- !u!212 &1507807605
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5392,260 +5670,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1132975607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1580747245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1580747248}
-  - component: {fileID: 1580747247}
-  - component: {fileID: 1580747246}
-  - component: {fileID: 1580747249}
-  m_Layer: 0
-  m_Name: CinemachineCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1580747246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580747245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BoundingShape2D: {fileID: 1505065077}
-  Damping: 0.5
-  SlowingDistance: 5
-  OversizeWindow:
-    Enabled: 0
-    MaxWindowSize: 0
-    Padding: 0
-  m_LegacyMaxWindowSize: -2
---- !u!114 &1580747247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580747245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Priority:
-    Enabled: 0
-    m_Value: 0
-  OutputChannel: 1
-  StandbyUpdate: 2
-  m_StreamingVersion: 20241001
-  m_LegacyPriority: 0
-  Target:
-    TrackingTarget: {fileID: 0}
-    LookAtTarget: {fileID: 0}
-    CustomLookAtTarget: 0
-  Lens:
-    FieldOfView: 34
-    OrthographicSize: 9
-    NearClipPlane: 0.3
-    FarClipPlane: 1000
-    Dutch: 0
-    ModeOverride: 0
-    PhysicalProperties:
-      GateFit: 2
-      SensorSize: {x: 21.946, y: 16.002}
-      LensShift: {x: 0, y: 0}
-      FocusDistance: 10
-      Iso: 200
-      ShutterSpeed: 0.005
-      Aperture: 16
-      BladeCount: 5
-      Curvature: {x: 2, y: 11}
-      BarrelClipping: 0.25
-      Anamorphism: 0
-  BlendHint: 0
---- !u!4 &1580747248
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580747245}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1844792, y: -0.048956454, z: -54.771824}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1580747249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580747245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9957825c83f2b104daa00b7de8a6fbc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPoint: {fileID: 247079572}
-  leftPoint: {fileID: 79780873}
-  rightPoint: {fileID: 1529889608}
-  frontPoint: {fileID: 652548617}
-  backPoint: {fileID: 270216981}
-  upPoint: {fileID: 53660233}
-  cameraMoveSpeed: 5
-  isLocked: 0
-  lockCD: 0.5
-  flashLightCD: 5
-  cameraCD: 0.5
-  flashLightDistance: 1
-  mainSprite: {fileID: 2114190745}
-  upSprite: {fileID: 1881006500}
-  backSprite: {fileID: 238065927}
-  mainDark: {fileID: 21300000, guid: 4ba6d355f588f6040a7fa77797c31370, type: 3}
-  leftLight: {fileID: 21300000, guid: c20f255fa6e5f174787262ac326e2d7f, type: 3}
-  rightLight: {fileID: 21300000, guid: d4704967eb1ecad44801bf1c1dbb53a4, type: 3}
-  upLight1: {fileID: 21300000, guid: 7d61ac0a68565f14b96e9e081e4e09e2, type: 3}
-  upLight2: {fileID: 21300000, guid: 79be05c7fadb8364295a6adacf736cd3, type: 3}
-  upLight3: {fileID: 21300000, guid: 99fe08fd93d2a4648ae5706ca44d089d, type: 3}
-  frontLight: {fileID: 21300000, guid: be56b1a3f898cee478cec72dd73d6e4f, type: 3}
-  upDark: {fileID: 21300000, guid: 96b6d151e2fc3d744aa1abe2c68c4f28, type: 3}
-  backLight: {fileID: 21300000, guid: 8207f0b1cbfe57e468cb86903d5fbb24, type: 3}
-  backDark: {fileID: 21300000, guid: 7e05bf6a8ca5312489a800ce8cd6414f, type: 3}
-  backMonster: {fileID: 21300000, guid: b9a1be2450790c34a924c49f0edbcfbf, type: 3}
-  battery: 100
-  batteryRate: 1
-  secondsPerHour: 60
-  currentHour: 0
-  pauseMenu: {fileID: 267550482}
-  flashlightBack:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1507807604}
-        m_TargetAssemblyTypeName: Demon5, Assembly-CSharp
-        m_MethodName: OnFlashlightHit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  flashlightOff:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 536747873}
-        m_TargetAssemblyTypeName: Demon4, Assembly-CSharp
-        m_MethodName: LightOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 935011006}
-        m_TargetAssemblyTypeName: Demon1, Assembly-CSharp
-        m_MethodName: OffFlashlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2109761448}
-        m_TargetAssemblyTypeName: Demon2, Assembly-CSharp
-        m_MethodName: Lightoff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  flashlightUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 536747873}
-        m_TargetAssemblyTypeName: Demon4, Assembly-CSharp
-        m_MethodName: LightOnDemon4
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  demon1Light:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 935011006}
-        m_TargetAssemblyTypeName: Demon1, Assembly-CSharp
-        m_MethodName: Flashlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  demon2Light:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2109761448}
-        m_TargetAssemblyTypeName: Demon2, Assembly-CSharp
-        m_MethodName: FlashlightOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  demon3Light:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1268362051}
-        m_TargetAssemblyTypeName: Demon3, Assembly-CSharp
-        m_MethodName: Flashlight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1596041096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5835,7 +5859,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.522
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5964,7 +5988,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.507
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6320,7 +6344,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2109761449}
   frontSprite: {fileID: 21300000, guid: 4b3a2a25154af14459d883448a8a09eb, type: 3}
   normalSprite: {fileID: 21300000, guid: d1a9a2297c35bb746a398663fa4006d9, type: 3}
-  cameraController: {fileID: 1580747249}
+  cameraController: {fileID: 872941429}
   startTimer: 5
   maxTimer: 15
 --- !u!212 &2109761449
@@ -6386,8 +6410,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109761447}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.353241, y: -2.4798815, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7131,7 +7155,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1580747248}
+  - {fileID: 872941432}
   - {fileID: 619394802}
   - {fileID: 1132975607}
   - {fileID: 1507807606}
