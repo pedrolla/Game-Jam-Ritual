@@ -1,13 +1,29 @@
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
     [SerializeField]
-    private AudioSource myAudioSource;
+    private AudioSource globalAudioSource;
+    [SerializeField]
+    private AudioSource middleAudioSource;
+    [SerializeField]
+    private AudioSource leftAudioSource;
+    [SerializeField] 
+    private AudioSource rightAudioSource;
+    [SerializeField] 
+    private AudioSource topAudioSource;
+    [SerializeField] 
+    private AudioSource bottomAudioSource;
+
     [SerializeField]
     private AudioClip monster5;
+    [SerializeField] 
+    private AudioClip monster2;
+    [SerializeField] 
+    private AudioClip monster3;
     [SerializeField]
     private AudioClip jumpScare;
     [SerializeField]
@@ -38,41 +54,78 @@ public class SoundManager : MonoBehaviour
 
     public void PlayMonster5()
     {
-        myAudioSource.PlayOneShot(monster5); 
+        bottomAudioSource.PlayOneShot(monster5); 
     }
 
-    public void PlayJumpScare()
+    public void PlayMonster2(string position)
     {
-        myAudioSource.PlayOneShot(jumpScare);
+        if (position == "front")
+        {
+            middleAudioSource.PlayOneShot(monster2);
+            return;
+        }
+
+        if (position == "right")
+        {
+            rightAudioSource.PlayOneShot(monster2);
+            return;
+        }
+
+        if (position == "left")
+        {
+            leftAudioSource.PlayOneShot(monster2);
+            return;
+        }
+    }
+
+    public void PlayMonster3(string position)
+    {
+        if (position == "front")
+        {
+            middleAudioSource.PlayOneShot(monster3);
+            return;
+        }
+
+        if (position == "right")
+        {
+            rightAudioSource.PlayOneShot(monster3);
+            return;
+        }
+
+        if (position == "left")
+        {
+            leftAudioSource.PlayOneShot(monster3);
+            return;
+        }
     }
 
     public void PlayFlashlight()
     {
-        myAudioSource.PlayOneShot(flashlight);
+        globalAudioSource.PlayOneShot(flashlight);
     }
 
     public void PlayLowBattery()
     {
-        myAudioSource.PlayOneShot(lowBattery);
+        globalAudioSource.PlayOneShot(lowBattery);
     }
 
     public void PlayHandJumpscare()
     {
-        myAudioSource.PlayOneShot(handJumpscare);
+        globalAudioSource.PlayOneShot(handJumpscare);
     }
 
     public void PlayRoofJumpscare()
     {
-        myAudioSource.PlayOneShot(roofJumpscare);
+        globalAudioSource.PlayOneShot(roofJumpscare);
     }
 
     public void PlayBedJumpscare()
     {
-        myAudioSource.PlayOneShot(bedJumpscare);
+        globalAudioSource.PlayOneShot(bedJumpscare);
     }
 
     public void PlayCatJumpscare()
     {
-        myAudioSource.PlayOneShot(catJumpscare);
+        globalAudioSource.PlayOneShot(catJumpscare);
     }
 }

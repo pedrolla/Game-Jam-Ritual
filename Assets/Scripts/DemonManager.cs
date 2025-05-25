@@ -16,9 +16,15 @@ public class DemonManager : MonoBehaviour
     [SerializeField]
     private int demonAmmount;
     [SerializeField]
+    private int maxDemonAmmount = 2;
+    [SerializeField]
     private float demonSpawnTime;
     [SerializeField]
+    private float newDemonSpawnTime;
+    [SerializeField]
     private float demon5SpawnTime;
+    [SerializeField]
+    private bool isDemon5;
 
 
     private void Awake()
@@ -35,7 +41,10 @@ public class DemonManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Demon5Handler());
+        if (isDemon5)
+        {
+            StartCoroutine(Demon5Handler());
+        }
         StartCoroutine(NormalDemonsHandler());
     }
 
@@ -45,6 +54,7 @@ public class DemonManager : MonoBehaviour
         {
             yield return new WaitForSeconds(demon5SpawnTime);
             demon5Script.StartDemon();
+            SoundManager.Instance.PlayMonster5();
         }
     }
 
@@ -59,7 +69,7 @@ public class DemonManager : MonoBehaviour
 
     private void SpawnNewDemon()
     {
-        if (demonAmmount == 2)
+        if (demonAmmount == maxDemonAmmount)
         {
             StartCoroutine(TryGetDemon());
             return;
@@ -79,12 +89,14 @@ public class DemonManager : MonoBehaviour
         if (newDemon.TryGetComponent<Demon2> (out var demonScript2))
         {
             string positionName = demonPosition.name;
+            SoundManager.Instance.PlayMonster2(positionName);
             demonScript2.SpawnedDemon(positionName);
             return;
         }
         if (newDemon.TryGetComponent<Demon3>(out var demonScript3))
         {
             string positionName = demonPosition.name;
+            SoundManager.Instance.PlayMonster3(positionName);
             demonScript3.ActivateDemon(positionName);
             return;
         }
@@ -102,7 +114,7 @@ public class DemonManager : MonoBehaviour
     private IEnumerator TryGetDemon()
     {
 
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(newDemonSpawnTime);
         SpawnNewDemon();
     }
 

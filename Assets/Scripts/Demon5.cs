@@ -20,7 +20,6 @@ public class Demon5 : MonoBehaviour
 
     public void StartDemon()
     {
-        SoundManager.Instance.PlayMonster5();
         StartCoroutine(DemonAttack());
         cameraContoller.IsBackMonster();
         isActive = true;
@@ -41,7 +40,7 @@ public class Demon5 : MonoBehaviour
 
     private void Kill()
     {
-        SoundManager.Instance.PlayJumpScare();
+        SoundManager.Instance.PlayBedJumpscare();
         JumpscareManager.Instance.PlayBedJumpScare();
     }
 

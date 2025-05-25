@@ -421,6 +421,7 @@ public class CameraController : MonoBehaviour
         if (battery <= 0)
         {
             battery = 0;
+            UIManager.Instance.Flashlight0();
 
             flashlightLimit = true;
             isFlashlight = false;
@@ -431,9 +432,25 @@ public class CameraController : MonoBehaviour
             upSprite.GetComponent<SpriteRenderer>().sprite = upDark;
         }
 
-        if (battery == 25)
+        if (battery < 80 && battery > 60)
+        {
+            UIManager.Instance.Flashlight4();
+        }
+
+        if (battery < 60 && battery > 40)
+        {
+            UIManager.Instance.Flashlight3();
+        }
+
+        if (battery < 40 && battery > 20)
+        {
+            UIManager.Instance.Flashlight2();
+        }
+
+        if (battery < 20 && battery > 0)
         {
             SoundManager.Instance.PlayLowBattery();
+            UIManager.Instance.Flashlight1();
         }
     }
 }

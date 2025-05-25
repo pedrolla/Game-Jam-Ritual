@@ -92,19 +92,28 @@ public class Demon1 : MonoBehaviour
             isRight = false;
 
             Vector2 currentPos = transform.position;
-            currentPos = new Vector2(currentPos.x + 6.05f, currentPos.y + 0.7f);
+            float randomNum = Random.Range(-3.5f, 4);
+            currentPos = new Vector2(currentPos.x + 6.05f, currentPos.y + randomNum);
             transform.position = currentPos;
         }
 
         if (position == "right")
         {
             isRight = false;
+            Vector2 currentPos = transform.position;
+            float randomNum = Random.Range(-6, 4.5f);
+            currentPos = new Vector2(currentPos.x, currentPos.y + randomNum);
+            transform.position = currentPos;
             spriteRenderer.sprite = rightSprite;
         }
 
         if (position == "left")
         {
             isRight = true;
+            Vector2 currentPos = transform.position;
+            float randomNum = Random.Range(-9, 3);
+            currentPos = new Vector2(currentPos.x, currentPos.y + randomNum);
+            transform.position = currentPos;
             spriteRenderer.sprite = leftSprite;
         }
     }
