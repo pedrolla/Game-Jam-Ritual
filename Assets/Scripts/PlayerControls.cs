@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
@@ -62,12 +64,18 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private Sprite backDark;
 
-    public UnityEvent flashlightBack; 
+    public UnityEvent flashlightBack;
     public UnityEvent flashlightOff;
     public UnityEvent flashlightUp;
     public UnityEvent demon1Light;
     public UnityEvent demon2Light;
     public UnityEvent demon3Light;
+
+    [Header("UI")]
+    [SerializeField] private Image bgImage;
+    [SerializeField] private GameObject resumeButton;
+    [SerializeField] private GameObject restartButton;
+    [SerializeField] private GameObject mainMenuButton;
 
 
     private void Awake()
@@ -77,6 +85,11 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
+        bgImage.enabled = false;
+        resumeButton.SetActive(false);
+        restartButton.SetActive(false);
+        mainMenuButton.SetActive(false);
+
         targetPoint = frontPoint;
     }
 
@@ -88,6 +101,7 @@ public class CameraController : MonoBehaviour
         inputActions.Player.S.performed += ctx => TryLook(backPoint, "s");
         inputActions.Player.D.performed += ctx => TryLook(rightPoint, "d");
         inputActions.Player.W.performed += ctx => TryLook(upPoint, "w");
+        inputActions.Player.ESC.performed += ShowPauseMenu;
 
         inputActions.Player.A.canceled += OnInputReleased;
         inputActions.Player.S.canceled += OnInputReleased;
@@ -95,6 +109,32 @@ public class CameraController : MonoBehaviour
         inputActions.Player.W.canceled += OnInputReleased;
 
         inputActions.Player.Flashlight.performed += FlashlightPerformed;
+    }
+
+    private void ShowPauseMenu(InputAction.CallbackContext context)
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            ShowPaused();
+        }
+    }
+
+    private void ShowPaused()
+    {
+        bgImage.enabled = true;
+        resumeButton.SetActive(true);
+        restartButton.SetActive(true);
+        mainMenuButton.SetActive(true);
+    }
+
+    public void HidePaused()
+    {
+        Time.timeScale = 1;
+        bgImage.enabled = false;
+        resumeButton.SetActive(false);
+        restartButton.SetActive(false);
+        mainMenuButton.SetActive(false);
     }
 
     private void OnDisable()
@@ -179,76 +219,16 @@ public class CameraController : MonoBehaviour
         if (targetPoint.position == frontPoint.position)
         {
             frontSprite.GetComponent<SpriteRenderer>().sprite = frontLight;
-            string position = PositionManager.Instance.GetDemonPosition("demon1");
-            if (position != null)
-            {
-                demon1Light.Invoke();
-                return;
-            }
-
-            string position2 = PositionManager.Instance.GetDemonPosition("demon2");
-            if (position2 != null)
-            {
-                demon2Light.Invoke();
-                return;
-            }
-
-            string position3 = PositionManager.Instance.GetDemonPosition("demon3");
-            if (position3 != null)
-            {
-                demon3Light.Invoke();
-                return;
-            }
         }
 
         if (targetPoint.position == leftPoint.position)
         {
             leftSprite.GetComponent<SpriteRenderer>().sprite = leftLight;
-            string position = PositionManager.Instance.GetDemonPosition("demon1");
-            if (position != null)
-            {
-                demon1Light.Invoke();
-                return;
-            }
-
-            string position2 = PositionManager.Instance.GetDemonPosition("demon2");
-            if (position2 != null)
-            {
-                demon2Light.Invoke();
-                return;
-            }
-
-            string position3 = PositionManager.Instance.GetDemonPosition("demon3");
-            if (position3 != null)
-            {
-                demon3Light.Invoke();
-                return;
-            }
         }
 
         if (targetPoint.position == rightPoint.position)
         {
             rightSprite.GetComponent<SpriteRenderer>().sprite = rightLight;
-            string position = PositionManager.Instance.GetDemonPosition("demon1");
-            if (position != null)
-            {
-                demon1Light.Invoke();
-                return;
-            }
-
-            string position2 = PositionManager.Instance.GetDemonPosition("demon2");
-            if (position2 != null)
-            {
-                demon2Light.Invoke();
-                return;
-            }
-
-            string position3 = PositionManager.Instance.GetDemonPosition("demon3");
-            if (position3 != null)
-            {
-                demon3Light.Invoke();
-                return;
-            }
         }
 
         if (targetPoint.position == upPoint.position)
@@ -284,5 +264,34 @@ public class CameraController : MonoBehaviour
                 new Vector3(targetPoint.position.x, targetPoint.position.y, transform.position.z),
                 cameraMoveSpeed * Time.deltaTime);
         }
+
+        if (isFlashlight)
+        {
+            string currentDirection = GetDirection();
+
+            if (PositionManager.Instance.GetDemonPosition("demon1") == currentDirection)
+            {
+                demon1Light.Invoke();
+            }
+
+            if (PositionManager.Instance.GetDemonPosition("demon2") == currentDirection)
+            {
+                demon2Light.Invoke();
+            }
+
+            if (PositionManager.Instance.GetDemonPosition("demon3") == currentDirection)
+            {
+                demon3Light.Invoke();
+            }
+        }
+    }
+
+    private string GetDirection()
+    {
+        if (targetPoint == frontPoint) return "front";
+        if (targetPoint == leftPoint) return "left";
+        if (targetPoint == rightPoint) return "right";
+        else return null;
     }
 }
+

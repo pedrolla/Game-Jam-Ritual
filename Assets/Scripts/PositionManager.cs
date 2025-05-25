@@ -7,7 +7,6 @@ public class PositionManager : MonoBehaviour
     public static PositionManager Instance;
 
     [SerializeField]
-    private Transform[] demonPositions;
     private List<Transform> availablePositions = new List<Transform>();
     private string demon1Position;
     private string demon2Position;

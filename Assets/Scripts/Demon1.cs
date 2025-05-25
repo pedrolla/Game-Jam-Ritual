@@ -9,32 +9,26 @@ public class Demon1 : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
 
-    private void Flashlight()
+    private void Awake()
     {
-            isLatern = true;
-            StartCoroutine(ShowMonster());
+        spriteRenderer.enabled = false;
     }
 
-    private IEnumerator ShowMonster()
+    public void Flashlight()
     {
-        if (isLatern)
+        if (isActive)
         {
-            while (!isActive)
-            {
-                yield return null;
-            }
-
-            {
-                spriteRenderer.enabled = true;
-                StartCoroutine (DemonTime());
-            }
+            isLatern = true;
+            spriteRenderer.enabled = true;
+            StartCoroutine(DemonTime());
         }
     }
 
-    private void OffFlashlight()
+    public void OffFlashlight()
     {
         if (isActive && isLatern)
         {
+            StopAllCoroutines();
             isActive = false;
             spriteRenderer.enabled = false;
             DemonManager.Instance.ReturnDemon(gameObject);
@@ -54,11 +48,14 @@ public class Demon1 : MonoBehaviour
 
     private void Kill()
     {
-        Debug.Log("Killed");
+        Debug.Log("Killed by 1");
+        StopAllCoroutines();
     }
 
     public void ActivateDemon()
     {
+        Debug.Log("activated");
+
         isActive = true;
     }
 }

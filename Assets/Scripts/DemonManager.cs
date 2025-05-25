@@ -46,7 +46,7 @@ public class DemonManager : MonoBehaviour
     {
         while (true)
         {
-            float spawnTime = Random.Range(30, 50);
+            float spawnTime = Random.Range(10, 11);
             yield return new WaitForSeconds(spawnTime);
             SpawnNewDemon();
         }
@@ -69,6 +69,11 @@ public class DemonManager : MonoBehaviour
         if (newDemon.TryGetComponent<Demon1>(out var demonScript))
         {
             demonScript.ActivateDemon();
+            return;
+        }
+        if (newDemon.TryGetComponent<Demon2>(out var demon2Script))
+        {
+            demon2Script.SpawnedDemon();
             return;
         }
     }
