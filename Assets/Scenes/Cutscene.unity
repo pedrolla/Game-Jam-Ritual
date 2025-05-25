@@ -218,6 +218,7 @@ MonoBehaviour:
   fireTime: 3
   endCD: 5
   cutsceneImages:
+  - {fileID: 21300000, guid: ec080fd84cfe1534da823122bb85e061, type: 3}
   - {fileID: 21300000, guid: 0659d99e3152c7f4283c954d8f903b79, type: 3}
   - {fileID: 21300000, guid: 412ee2fe114d86b418499e2f3097370d, type: 3}
   - {fileID: 21300000, guid: 295c63e8d04ef33449a4c089f570bff1, type: 3}
@@ -235,7 +236,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5bd21b81d231fb74e994d51d6dab4624, type: 3}
   - {fileID: 21300000, guid: c34ee21a09739014bb84880f69c298f9, type: 3}
   - {fileID: 21300000, guid: 2b8f6adc787edaf44bd5cfb541099e27, type: 3}
-  - {fileID: 21300000, guid: ec080fd84cfe1534da823122bb85e061, type: 3}
   cutsceneImage: {fileID: 1190816704}
 --- !u!114 &1190816704
 MonoBehaviour:

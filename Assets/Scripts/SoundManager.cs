@@ -25,8 +25,6 @@ public class SoundManager : MonoBehaviour
     [SerializeField] 
     private AudioClip monster3;
     [SerializeField]
-    private AudioClip jumpScare;
-    [SerializeField]
     private AudioClip flashlight;
     [SerializeField]
     private AudioClip lowBattery;

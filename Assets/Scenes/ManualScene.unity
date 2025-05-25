@@ -579,7 +579,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 692667973}
         m_TargetAssemblyTypeName: ManualScript, Assembly-CSharp
-        m_MethodName: PreviousImage
+        m_MethodName: PreviousImage2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1060,7 +1060,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 692667973}
         m_TargetAssemblyTypeName: ManualScript, Assembly-CSharp
-        m_MethodName: NextImage
+        m_MethodName: NextImage2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

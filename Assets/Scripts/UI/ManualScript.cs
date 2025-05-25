@@ -39,6 +39,32 @@ public class ManualScript : MonoBehaviour
         }
     }
 
+    public void PreviousImage2()
+    {
+        if (currentImage > 0)
+        {
+            --currentImage;
+            UpdateImage();
+        }
+        else
+        {
+            currentImage = manualList.Count - 1;
+        }
+    }
+
+    public void NextImage2()
+    {
+        if (currentImage < manualList.Count - 1)
+        {
+            ++currentImage;
+            UpdateImage();
+        }
+        else
+        {
+            currentImage = 0;
+        }
+    }
+
     private void UpdateImage()
     {
         imageOfManual.sprite = manualList[currentImage];

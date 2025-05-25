@@ -131,6 +131,7 @@ public class CameraController : MonoBehaviour
     {
         targetPoint = frontPoint;
         originalSize = 9;
+        NoBlur();
     }
 
     private void OnEnable()
@@ -199,7 +200,7 @@ public class CameraController : MonoBehaviour
             _ => frontPoint
         };
 
-        if (rawInput == Direction.S)
+        if (remapped == Direction.S)
         {
             StartCoroutine(ZoomInBed());
         }
@@ -221,6 +222,7 @@ public class CameraController : MonoBehaviour
         FlashlightReleased();
 
         float elapsed = 0f;
+        GetBlur();
 
         // Zoom in
         while (elapsed < zoomDuration)
@@ -233,17 +235,59 @@ public class CameraController : MonoBehaviour
 
         virtualCamera.Lens.OrthographicSize = maxZoom;
 
-        GetBlur();
+        yield return new WaitForSeconds(blurDuration);
+
 
         transform.position = new Vector3(backPoint.position.x, backPoint.position.y, transform.position.z);
         targetPoint = backPoint;
         virtualCamera.Lens.OrthographicSize = originalSize; // Reset zoom instantly
 
-        yield return new WaitForSeconds(blurDuration);
 
         NoBlur(); 
 
         isZoomingBack = false;
+        isLooking = false;
+    }
+
+    private IEnumerator ZoomOutBed()
+    {
+        Debug.Log("ZoomOutBed called");
+
+        if (isZoomingBack || isLooking) yield break;
+
+        isZoomingBack = true;
+        isLooking = true;
+        activeRawDirection = null;
+
+        FlashlightReleased();
+
+        GetBlur();
+
+        float elapsed = 0f;
+        float currentSize = virtualCamera.Lens.OrthographicSize;
+
+        while (elapsed < zoomDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / zoomDuration;
+            virtualCamera.Lens.OrthographicSize = Mathf.Lerp(currentSize, 10, t);
+            yield return null;
+        }
+
+
+
+        yield return new WaitForSeconds(blurDuration);
+
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = frontPoint.position; targetPoint = frontPoint;
+
+        transform.position = new Vector3(targetPosition.x, targetPosition.y, startPosition.z);
+        virtualCamera.Lens.OrthographicSize = originalSize;
+
+        NoBlur();
+
+        isZoomingBack = false;
+        isLooking = false;
     }
 
     public void RotateControlsLeft()
@@ -261,6 +305,15 @@ public class CameraController : MonoBehaviour
         inputMap[Direction.D] = Direction.W;
         inputMap[Direction.W] = Direction.A;
     }
+
+    public void ControlsDefault()
+    {
+        inputMap[Direction.A] = Direction.A;
+        inputMap[Direction.S] = Direction.S;
+        inputMap[Direction.D] = Direction.D;
+        inputMap[Direction.W] = Direction.W;
+    }
+
 
     private void TryLook(Transform direction, Direction rawInput)
     {
@@ -293,6 +346,12 @@ public class CameraController : MonoBehaviour
             {
                 FlashlightReleased();
             }
+
+        if (released == Direction.S)
+        {
+            StartCoroutine(ZoomOutBed());
+            return;
+        }
 
             StartCoroutine(CameraReset());
     }
@@ -412,18 +471,6 @@ public class CameraController : MonoBehaviour
     {
         yield return new WaitForSeconds(flashLightCD);
         flashlightLimit = false;
-    }
-
-    public void LockCamera()
-    {
-        isLocked = true;
-        StartCoroutine(UnlockCamera());
-    }
-
-    private IEnumerator UnlockCamera()
-    {
-        yield return new WaitForSeconds(lockCD);
-        isLocked = false;
     }
 
     private void Update()

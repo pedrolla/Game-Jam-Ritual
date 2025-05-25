@@ -82,7 +82,6 @@ public class Demon2 : MonoBehaviour
             if (firstTimeLook)
             {
                 firstTimeLook = false;
-                cameraController.LockCamera();
             }
 
             lightOn = true;

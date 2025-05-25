@@ -33,7 +33,6 @@ public class Demon1 : MonoBehaviour
             if (firstTimeLook)
             {
                 firstTimeLook = false;
-                cameraController.LockCamera();
             }
 
             isLatern = true;
