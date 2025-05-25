@@ -600,7 +600,6 @@ public class CameraController : MonoBehaviour
 
         if (battery < 20 && battery > 0)
         {
-            SoundManager.Instance.PlayLowBattery();
             UIManager.Instance.Flashlight1();
         }
     }

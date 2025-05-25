@@ -106,11 +106,6 @@ public class SoundManager : MonoBehaviour
         globalAudioSource.PlayOneShot(flashlight);
     }
 
-    public void PlayLowBattery()
-    {
-        globalAudioSource.PlayOneShot(lowBattery);
-    }
-
     public void PlayHandJumpscare()
     {
         globalAudioSource.PlayOneShot(handJumpscare);

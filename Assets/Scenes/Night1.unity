@@ -3350,7 +3350,7 @@ MonoBehaviour:
   backMonster: {fileID: 21300000, guid: b9a1be2450790c34a924c49f0edbcfbf, type: 3}
   battery: 100
   batteryRate: 2
-  secondsPerHour: 60
+  secondsPerHour: 20
   currentHour: 0
   newHour: 0
   pauseMenu: {fileID: 267550482}
